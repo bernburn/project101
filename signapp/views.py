@@ -36,6 +36,7 @@ def user_detail(request, pk):
     elif request.method == 'PUT':
         serializer = SignUpRegistrationSerializer(user, data=request.data, partial=True)
         if serializer.is_valid():
+            serializer.save()
             return Response(serializer.data)
         
         else:
