@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8wi3u!c@2&+n*i=*pqa#8-s%*%xqsmm(i+t6_)(019c=u9(4&w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['project101-k5nv.onrender.com']
+ALLOWED_HOSTS = ['https://project101-k5nv.onrender.com', 'http://127.0.0.1:8000/', '127.0.0.1:8000', '127.0.0.1', 'http://192.168.20.225:8000/', '192.168.20.225:8000', '192.168.20.225']
 
 
 # Application definition
@@ -55,6 +55,7 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'project101.urls'
+CSRF_TRUSTED_ORIGINS = ["https://project101-k5nv.onrender.com",]
 
 TEMPLATES = [
     {
